@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AgroSmart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>🌱 AgroSmart</h1>
+    <p>A TECHNOLOGY BUILD FOR FARMERS</p>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <div class="container">
+    
+    <!-- 1. Add Crop Form -->
+    <div class="section">
+      <h3>Add Crop (Farmer)</h3>
+      <input type="text" id="name" placeholder="Crop Name">
+      <input type="number" id="price" placeholder="Price (₹/kg)">
+      <button onclick="addCrop()">Add Crop</button>
+    </div>
+
+    <hr>
+
+    <!-- 2. Display Crops List -->
+    <div class="section">
+      <h3>Available Crops (Buyer)</h3>
+      <div id="cropList" class="card-grid">
+        <div class="card">
+          <h4>Fresh Onions</h4>
+          <p>Price: ₹30 / kg</p>
+          <button onclick="alert('Order Placed!')">Buy</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 AgroSmart Project. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function addCrop() {
+      let name = document.getElementById("name").value;
+      let price = document.getElementById("price").value;
+
+      if (!name || !price) {
+        alert("Please fill both fields");
+        return;
+      }
+
+      let div = document.createElement("div");
+      div.className = "card";
+      div.innerHTML = `<h4>${name}</h4><p>Price: ₹${price} / kg</p><button onclick="alert('Order Placed!')">Buy</button>`;
+
+      document.getElementById("cropList").appendChild(div);
+
+      document.getElementById("name").value = "";
+      document.getElementById("price").value = "";
+    }
+  </script>
+
+</body>
+</html>
