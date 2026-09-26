@@ -1,0 +1,6 @@
+{
+  "name": "कृषीमित्र - शेतकरी सेवा व योजना पोर्टल (KrishiMitra)",
+  "description": "महाराष्ट्रातील शेतकऱ्यांसाठी पशुवैद्यकीय अधिकारी संपर्क, माती परीक्षण केंद्रे, सेतू व ई-सेवा केंद्रे आणि सर्व शासकीय योजनांची मराठीत संपूर्ण माहिती.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
